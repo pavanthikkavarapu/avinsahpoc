@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+.logout-list
+{
+    left: calc(100% - 100px) !important;
+    min-width: 6rem !important;
+}
+.container{
+    text-align: -webkit-center;
+    text-align: -moz-center;
+}
+.ces-prof-name{
+    margin-bottom: 0px;
+    margin-right: 10px;
+}
+.prof-pic{
+    max-width: 46px;
+    border-radius: 50%;
+    width:46px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+.notify{
+    margin-left: auto;
+    padding: 8px;
+}
+.badge{
+    position: relative;
+    top: -8px;
+    left: -2px;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    font-size: 66%;
+}
+.fa-bell{
+    color: #00467e;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #00467e;
+}
+a {
+    color: #00467e;
+}
+.token{
+    width: 98%;
+    position: absolute;
+    bottom: 0px;
+}
+.input-group-addon{
+    width:10%;
+}
+
+
+
+/* material styles*/
+.mat-form-field-placeholder {
+    color: rgb(99, 99, 99);
+}
+.select-panel-done-animating {
+    background: #757575;
+}
+.mat-select-value {
+    color: #212529;
+}

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="col-md-5 login-container">
+    <form (ngSubmit)="localLogin()" novalidate class="form-signin" #loginForm="ngForm">
+      <h2 class="form-signin-heading">CES</h2>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </span>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+" [(ngModel)]="email" name="email" minlength="10" required #emailVar="ngModel"
+          id="inputEmail" class="form-control" placeholder="Email address" autofocus="">
+      </div>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+        </span>
+        <input type="password" [(ngModel)]="password" name="password" id="inputPassword" class="form-control" placeholder="Password"
+          required="">
+      </div>
+      <div *ngIf="formerror != ''" class="alert alert-danger" role="alert">
+        Invalid Credentials
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <input [disabled]="!loginForm.valid" value="Sign in" class="btn btn-lg btn-primary btn-block" type="submit">
+      <br>
+      <button type="button" class="btn btn-sm btn-social btn-lg btn-google" (click)="googleLogin()">
+        <i class="fa fa-google"></i>Sign in with Google</button>
+      <button type="button" class="btn btn-sm btn-social btn-lg facebook" (click)="facebookLogin()">
+        <i class="fa fa-facebook"></i>Sign in with Facebook</button>
+    </form>
+  </div>
+</div>
